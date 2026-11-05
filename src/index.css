@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #EBF3FA;
+    color: #1E293B;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  .bg-medisy-header {
+    background: linear-gradient(165deg, #0A85EA 0%, #0077D7 50%, #0060B6 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-medisy-header::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 70%);
+    pointer-events: none;
+  }
+
+  .bg-medisy-header::before {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+    pointer-events: none;
+  }
+
+  .medisy-tile {
+    background: linear-gradient(145deg, #0A82E6, #0072CE);
+    box-shadow: 0 8px 18px -4px rgba(0, 114, 206, 0.3);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .medisy-tile:active {
+    transform: scale(0.97);
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F1F5F9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+  }
+}
